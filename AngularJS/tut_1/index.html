@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AngularJS Tutorial 1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" type="text/javascript"></script>
+	<script src="app.js" type="text/javascript"></script>
+	<script src="maincontroller.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id='content' ng-app='TutorialApp' ng-controller='MainController'>
+		<p>Filter Name: <input type='text' ng-model='searchFilter' /></p>
+		<p>Name: 
+			<select ng-model='selectedPerson' ng-options='person.name for person in people | filter:searchFilter'></select>
+		</p>
+		<p>Music Genre: <select ng-model='selectedGenre'>
+			<option ng-repeat='genre in people[selectedPerson.id].music'>{{genre}}</option>
+		</select></p>
+
+		<p ng-show='selectedPerson != 0 && selectedGenre != null'>{{selectedPerson.name}} likes to listen to {{selectedGenre}}.</p>
+	</div>
+
+</body>
+
+</html>
