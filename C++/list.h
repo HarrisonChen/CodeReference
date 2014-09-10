@@ -6,7 +6,7 @@ class Node{
 public:
 	int data;
 	Node *next;
-	Node(int data, Node *next = NULL){
+	Node(int data, Node *next = 0){
 		this->data = data;
 		this->next = next;
 	}
@@ -14,7 +14,7 @@ public:
 
 class List{
 
-	Node *head;
+	Node *head, *tail;
 
 public:
 	List();
@@ -26,8 +26,8 @@ public:
 	void print();
 	void pushFront(int);
 	void pushBack(int);
-	void popFront(int);
-	void popBack(int);
+	void popFront();
+	void popBack();
 };
 
 #endif "_LIST_H_"
