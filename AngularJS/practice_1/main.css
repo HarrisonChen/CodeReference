@@ -1,0 +1,7 @@
+.slide {
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+	transition-delay: 0s;
+}
