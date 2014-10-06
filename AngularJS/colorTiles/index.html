@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Color Tiles</title>
+</head>
+<body ng-app="app">
+	<div ng-controller="platformCtrl" ng-init="unfold()">
+		<div ng-repeat="tile in tiles track by $index">
+			<tile top-margin="{{tile.top}}"
+						left-margin="{{tile.left}}"
+						color="{{tile.color}}">
+			</tile>
+		</div>
+	</div>
+  <!-- <tile top-margin="0px" left-margin="0px" color="#00FF00"></tile> -->
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
