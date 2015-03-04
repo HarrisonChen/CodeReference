@@ -1,3 +1,5 @@
+// Function Invocation Patterns
+
 'use strict';
 
 var add = function(a, b) {
