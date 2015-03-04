@@ -66,19 +66,18 @@ var statusObj = {
 // thus returning status in statusObj
 var status = Quo.prototype.getStatus.apply(statusObj);
 
-console.log('sum:');
-console.log(sum);
+console.log('sum: %d', sum);
 
-console.log('status:');
+console.log('status: %s', status);
 console.log(status);
 
-console.log(myQuo.getStatus());
+console.log('myQuo.getStatus(): %s', myQuo.getStatus());
 
 obj.increment();
-console.log(obj.value);
+console.log('obj.value: %s', obj.value);
 
 obj.increment(5);
-console.log(obj.value);
+console.log('obj.value: %s', obj.value);
 
 obj.double();
-console.log(obj.value);
+console.log('obj.value: %s', obj.value);
